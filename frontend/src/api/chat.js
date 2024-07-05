@@ -3,7 +3,7 @@ import axios from "axios";
 export const postData = async (formData) => {
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/v1/aiassistent/upload",
+      `${import.meta.env.VITE_BACKEND_URI}/aiassistent/upload`,
       formData,
       {
         headers: {
